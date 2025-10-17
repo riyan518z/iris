@@ -43,7 +43,7 @@ import pickle
 # -----------------------------
 # Load the trained model
 # -----------------------------
-model_path = "model/model_final.pkl"
+model_path = "model_final.pkl"
 try:
     with open(model_path, "rb") as file:
         model = pickle.load(file)
@@ -109,6 +109,7 @@ if submitted:
         st.image(image_url, caption=prediction, use_column_width=True)
     else:
         st.warning("⚠️ No matching image URL found for this species.")
+
 
 
 
